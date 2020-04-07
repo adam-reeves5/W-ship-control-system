@@ -1,0 +1,783 @@
+@import '../node_modules/antd/lib/style/index';
+.App {
+    padding: 24px;
+    h1 {
+        color: @heading-color
+    }
+}
+
+.layout {
+    padding-top: 104px;
+}
+.sidebar-class {
+    position: fixed !important;
+    background-color: #3d3d3d;
+}
+.role-code {
+    .ant-btn {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #7d7d7d;
+        margin: 2px 0px;
+        border-radius: 2px;
+        padding: 0px;
+    }
+    .ant-btn:hover {
+        background: #3d3d3d;
+    }
+    .ant-btn[disabled] {
+        background: #4d4d4d;
+    }
+    .numpad-letters {
+        margin-left: 4px;
+        font-size: 60%;
+    }
+}
+.role-select {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+    border: none;
+    .ant-select-selection {
+        border: 1px solid @primary-color;
+    }
+    .ant-select-arrow-icon {
+        color: @primary-color;
+    }
+}
+.role-change-widget-modal {
+    .pin-change-instructions {
+        text-align: center;
+        font-style: italic;
+    }
+    .role-change-widget-modal-title {
+        text-align: center;
+    }
+    .ant-modal-header {
+        border: none;
+    }
+    .ant-modal-body {
+        padding: 0px 16px 16px 16px;
+    }
+    .ant-modal-footer {
+        .ant-btn {
+            width: 100%;
+            height: 50px;
+            border: none;
+        }
+        .ant-btn-default {
+            background: #4d4d4d;
+        }
+        .ant-btn-group {
+            width: 100%;
+            .ant-btn {
+                width: 50%;
+                border: 2px solid #2d2d2d;
+            }
+        }
+        padding: 0px;
+        border: none;
+    }
+    .pin-viewer {
+        text-align: center;
+        font-size: 18px;
+        background: #1d1d1d;
+        color: @primary-color;
+        border-radius: 4px;
+        height: 26px;
+    }
+    .pin-instructions {
+        text-align: center;
+        font-size: 18px;
+        color: #5d5d5d;
+        background: #1d1d1d;
+        border-radius: 4px;
+        height: 26px;
+    }
+}
+.role-select-dropdown {
+    .ant-select-dropdown-menu {
+        background-color: #1d1d1d;
+    }
+    .ant-select-dropdown-menu-item:hover {
+        background-color: #2d2d2d;
+    }
+    .ant-select-dropdown-menu-item:focus {
+        background-color: #1d1d1d;
+    }
+    .ant-select-dropdown-menu-item-selected {
+        background-color: #1d1d1d;
+    }
+    .ant-select-dropdown-menu-item-active {
+        background-color: #1d1d1d;
+    }
+  }
+.nav-bar {
+    .logo-div {
+        width: 80px;
+        height: 48px;
+        float: left;
+        text-align: center;
+        padding-left: 0px;
+        padding-top: 4px;
+        .logo {
+            font-size: 24px;
+            color: rgb(111, 146, 162);
+          }
+      }
+      .home-link {
+          padding-right: 0px;
+          img {
+              width: 96px;
+          }
+      }
+      .notification-div {
+        float: right;
+        padding: 0px;
+        color: rgb(111, 146, 162);
+        .anticon {
+            padding-right: 16px;
+        }
+      }
+      .user-div {
+        float: right;
+        padding: 0px;
+        color: rgb(111, 146, 162);
+        .ant-btn {
+            padding-right: 16px;
+            padding-left: 0px;
+            i {
+                margin-right: 0px;
+            }
+        }
+      }
+      
+}
+// HOME COMPONENT
+.location-view {
+    div {
+        margin: 48px auto !important
+    }
+}
+
+.ant-message-notice-content {
+    color: #fff
+}
+
+.footer {
+    i {
+        color: @primary-color;
+    }
+    margin-top: 16px;
+    text-align: center;
+}
+
+.ant-switch {
+    background-color: #8484847a;
+}
+
+.ant-switch-checked {
+    background-color: #6f92a2;
+}
+.ant-switch::after {
+    transition: all .1s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+
+.tripped {
+    background-color: #de8d05;
+}
+
+.ant-slider {
+    margin: 18px auto 0px;
+}
+.ant-slider-handle {
+    width: 18px;
+    height: 18px;
+    margin-top: -7px;
+    border: solid 1px #bdc7c9;
+}
+.ant-slider-handle:focus {
+    box-shadow: none;
+}
+
+.circuit-container {
+    padding: 8px;
+    margin: 8px;
+    height: 128px;
+    border-radius: 8px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.23);
+    .dimmable-circuit {
+        margin: 0px 10px;
+    }
+    .ant-switch {
+        font-size: 24px;
+        min-width: 66px;
+        height: 33px;
+        line-height: 30px;
+        border-radius: 150px;
+        border: 1.5px solid transparent;
+    }
+    .ant-switch-inner {
+        font-size: 18px;
+        margin-right: 9px;
+        margin-left: 36px;
+    }
+    .ant-switch::after {
+        width: 27px;
+        height: 27px;
+        border-radius: 27px;
+        top: 1.5px;
+        background-color: rgb(255, 255, 255, 0.65);
+        transition: all .1s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    }
+    .ant-switch-loading-icon {
+        font-size: 18px;
+        margin-top: 4px;
+    }
+    .ant-switch.ant-switch-loading .ant-switch-loading-icon {
+        color: rgba(0, 0, 0, 0.80);
+        margin-left: 4px;
+    }
+    .ant-switch-checked.ant-switch-loading .ant-switch-loading-icon {
+        color: rgba(0, 0, 0, 0.80);
+        margin-left: -22px;
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 16px;
+}
+#circuit-details-page {
+    background: rgba(0, 0, 0, 0.23);
+    margin-top: 16px;
+    .circuit-container {
+        padding: 8px;
+        margin: 8px;
+        border-radius: 8px;
+        text-align: center;
+        background: transparent;
+        .dimmable-circuit {
+            margin: 0px 10px;
+        }
+    }
+    .circuit-details-divider {
+        background: rgba(0, 0, 0, 0.35);
+        margin: 8px 0px;
+        height: 2px;
+    }
+}
+
+.circuit-details {
+    margin: 16px 16px;
+    // background: rgba(0, 0, 0, 0.23);
+    // padding: 16px;
+    // border-radius: 8px;
+    .ant-switch-loading-icon, .ant-switch::after {
+        background-color: rgba(255, 255, 255);
+    }
+    .ant-btn-link {
+        height: 24px;
+        padding: 0px;
+    }
+    .label-value-pair {
+        font-size: 16px;
+        font-weight: 300;
+        .circuit-label {
+            text-align: right;
+            padding-right: 8px;
+        }
+        .circuit-colon {
+            text-align: center;
+        }
+        .circuit-value {
+            text-align: left;
+            padding-left: 8px;
+            font-weight: 400;
+        }
+    }
+}
+
+.alarms-page {
+    .alarms-table {
+        width: 95%;
+        .ant-table-thead > tr > th {
+            background: none;
+            color: rgba(255, 255, 255);
+        }
+        .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+        .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+        .ant-table-thead > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+        .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+            background: none;
+        }
+        .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
+            background: none;
+        }
+    }
+    .alarms-page-filter {
+        text-align: center;
+    }
+    
+    .alarm-system-title {
+        text-align: center;
+        padding-top: 8px;
+        font-size: 20px;
+        margin-bottom: 0px;
+        font-weight: 500;
+    }
+    .alarm-system-button {
+        padding: 16px;
+        text-align: center;
+    }
+    .ant-btn-primary:focus, .ant-btn-primary:hover {
+        background-color: #6f92a2;
+        border-color: #6f92a2;
+    }
+    .alarm-page-widget {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.23);
+        margin: 8px;
+        padding: 12px;
+        border-radius: 8px;
+    }
+    .alarm-name {
+        font-size: 16px;
+    }
+    .alarm-audible-icon {
+        padding-left: 8px;
+    }
+    .active-alarm {
+        font-size: 16px;
+    }
+    // .alarm-audible-icon {
+    //     svg {
+    //         fill: #de8d05;
+    //     }
+    // }
+    .alarm-page-widget-active {
+       box-shadow: 0px 0px 5px 1px #de8d05;
+    //    background: #0000007d;
+    }
+    .alarm-source {
+        font-size: 14px;
+    }
+}
+
+.alarm-widget {
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+    .alarm-name {
+        font-size: 18px;
+    }
+    .alarm-threshold {
+        margin-top: 16px;
+    }
+    .active-alarm {
+        .alarm-name {
+            color: #de8d05;
+            font-weight: 500;
+        }
+    }
+}
+
+.page-title-nav {
+    text-align: center;
+    margin: auto;
+    background-color: #617279;
+    line-height: 32px;
+    color: #ffffffb3;
+    font-weight: 600;
+    min-width: 280px;
+    border-radius: 0px 0px 8px 8px;
+    font-size: 20px;
+    padding: 0px 24px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.back-icon-page-title {
+    float: left;
+    padding-right: 8px;
+    padding-top: 6px;
+    margin-left: -16px;
+}
+
+.tank-widget {
+    margin: 16px;
+    text-align: center;
+    .tank-widget-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .tank-widget-capacity {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    .tank-widget-disconnected, .ant-btn:hover {
+        color: @primary-color;
+        cursor: default;
+    }
+    .tank-widget-progress-bar-div {
+        .tank-widget-progress-bar-percentage {
+            margin: 4px;
+            font-size: 18px;
+        }
+        .tank-widget-progress-bar-capacity-remaining {
+            margin: 4px;
+            font-size: 16px;
+        }
+        .tank-widget-progress-bar-capacity-remaining-label {
+            font-size: 14px;
+            margin: 4px;
+            font-style: italic;
+        }
+        .tank-widget-progress-bar-details {
+            font-size: 12px;
+            .ant-btn-link {
+                margin: 0px;
+                font-size: 12px;
+                padding: 0px;
+                line-height: 1;
+                height: 12px;
+            }
+        }
+    }
+}
+
+.battery-widget {
+    margin: 24px;
+    text-align: center;
+    .battery-widget-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    .battery-widget-progress-bar {
+        margin-bottom: 0px;
+        padding-right: 16px;
+    }
+    .battery-unit {
+        margin-left: 4px;
+        font-size: 16px;
+    }
+    .battery-widget-minutes {
+        margin-left: 4px;
+    }
+    .ant-page-header {
+        padding-top: 0px;
+    }
+    .battery-details {
+        text-align: center;
+        .ant-page-header-heading-title {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        .ant-descriptions-item-label {
+            color: rgba(255, 255, 255, 0.66);
+            font-weight: 600;
+        }
+        .ant-descriptions-row > th, .ant-descriptions-row > td {
+            padding-bottom: 0px;
+        }
+        .ant-descriptions-item-content {
+            font-size: 24px;
+        }
+    }
+}
+
+.bilge-widget {
+    text-align: center;
+    margin: 8px;
+    .ant-card {
+        background: #1d1d1d;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .pump-status {
+        font-size: 18px;
+        i {
+            font-size: 22px;
+            margin-left: 8px;
+        }
+        .pump-running {
+            color: #de8d05;
+        }
+    }
+    .bilge-auto-on-off {
+        margin: 16px;
+    }
+    .bilge-widget-title {
+        margin-bottom: 16px;
+    }
+    .bilge-alarm-enable-label {
+        margin-right: 8px;
+    }
+}
+
+.about-page {
+    margin-top: 24px;
+    .about-card {
+        margin: 16px;
+        text-align: center;
+    }
+    .ant-card-cover {
+        background: #617279;
+    }
+    .label {
+        font-size: 16px;
+    }
+    .version-number {
+        font-size: 18px;
+        margin-left: 8px;
+    }
+}
+
+.engine-widget {
+    .engine-details {
+        text-align: center;
+        .ant-page-header-heading-title {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        .ant-descriptions-item-label {
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 600;
+        }
+        .ant-descriptions-item-content {
+            font-size: 20px;
+        }
+    }
+    .engine-name {
+        margin-bottom: 0px;
+        font-size: 28px;
+    }
+    .engine-gauge {
+        width: 100%;
+        #Port {
+            .percent-text {
+                font-size: 26px !important;
+            }
+        }
+        #Stbd {
+            .percent-text {
+                font-size: 26px !important;
+            }
+        }
+    }
+}
+
+.touch-button {
+    .ant-btn {
+        width: 108px;
+        height: 64px;
+        border-radius: 24px;
+        margin: 8px;
+    }
+    .ant-btn-default {
+        background: #3d3d3d;
+        color: rgba(255, 255, 255);
+        border-color: rgba(255, 255, 255);
+    }
+    .ant-btn:hover, .ant-btn:focus, .ant-btn:active, .ant-btn.active {
+        color: rgba(255, 255, 255);
+        border-color: rgba(255, 255, 255);
+    }
+}
+.winch-page {
+    .winch-section {
+        margin: 8px;
+    }
+    .title {
+        text-align: center;
+        font-size: 22px;
+        margin: 4px;
+    }
+    .sub-title {
+        text-align: center;
+        font-size: 18px;
+        margin: 4px;
+    }
+}
+
+.ac-page {
+    .ac-source-section {
+        text-align: center;
+        .ac-source-values {
+            margin: 8px;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.23);
+            border-radius: 8px;
+            border: 1px #2d2d2d solid;
+        }
+        .connected {
+            border: 1px #6f92a2 solid;
+        }
+    }
+    .ac-divider {
+        background: rgba(0, 0, 0, 0.35);
+    margin: 8px 0px;
+    height: 2px;
+    }
+    .ac-title {
+        text-align: center;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0px;
+    }
+}
+
+.ac-circuit {
+    text-align: center;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.23);
+    .title {
+        margin: 8px;
+        font-size: 18px;
+
+    }
+    .state-switch {
+        margin: 8px;
+        .ant-switch {
+            border: 1px solid transparent;
+            background: #8484847a;
+        }
+        .ant-switch-checked {
+            background: #6f92a2;
+        }
+        .ant-switch::after {
+            background-color: rgb(255, 255, 255, 0.65);
+        }
+        .ant-switch-loading, .ant-switch-disabled {
+            opacity: 0.6;
+        }
+    }
+    .buttons {
+        margin: 8px;
+        // add button css here
+    }
+}
+
+.winch-pair {
+    background: #3d3d3d;
+    border: 1px solid #1d1d1d;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
+
+
+.enables-page {
+    text-align: center;
+    .enable-table-column {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .enable-switch-row {
+        padding: 8px;
+        margin: 0px;
+    }
+    .colored {
+        background: #1d1d1d;
+    }
+    .ant-switch {
+        border: 1px solid transparent;
+        background: #8484847a;
+    }
+    .ant-switch-checked {
+        background: #6f92a2;
+    }
+    .ant-switch::after {
+        background-color: rgb(255, 255, 255, 0.65);
+    }
+    .ant-switch-loading, .ant-switch-disabled {
+        opacity: 0.6;
+    }
+    
+}
+.ant-collapse {
+    border: none;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    padding-left: 16px;
+}
+.ant-collapse > .ant-collapse-item {
+    background: #2d2d2d;
+    border: none;
+    text-align: center;
+}
+.ant-collapse-content {
+    border: none;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    color: rgb(255, 255, 255, 0.65);
+}
+.ant-collapse > .ant-collapse-item:last-child, .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+    border-radius: 0px;
+}
+.ant-collapse-content > .ant-collapse-content-box {
+    padding: 0px;
+}
+
+.commit-parameters-div {
+    margin: 16px 24px;
+    .ant-btn-primary {
+        color: #fff;
+        background-color: #3d3d3d;
+        border-color: #3d3d3d;
+    }
+    .ant-btn-primary:hover {
+        color: #fff;
+        background-color: #4d4d4d;
+        border-color: #4d4d4d;
+    }
+    .ant-btn-primary:focus {
+        color: #fff;
+        background-color: #3d3d3d;
+        border-color: #3d3d3d;
+    }
+}
+
+.hydraulic-parameter-input {
+    .ant-btn {
+        margin: 0 3px;
+        font-size: 20px;
+        height: 40px;
+        width: 48px;
+    }
+    .ant-btn[disabled] {
+        background-color: #2d2d2d;
+        color: #2d2d2d;
+    }
+    .ant-input {
+        width: 50%;
+        height: 40px;
+        background-color: transparent;
+        font-size: 20px;
+        line-height: 1.5;
+        border: none;
+        text-align: center;
+        box-shadow: 0 0 0 2px rgba(111, 146, 162, 0.2);
+    }
+    .ant-input-disabled {
+        color: #d1dce5;
+    }
+}
+
+.hydraulic-sensor, .hydraulic-parameter, .hydraulic-actions {
+    background:rgba(0, 0, 0, 0.23);
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    .ant-slider {
+        margin: 18px auto 16px;
+        width: calc(70% + 64px);
+    }
+}
